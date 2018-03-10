@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="Braw的博客">
 <meta property="og:description" content="SpringBoot认识之所以接触SpringBoot并学习它，主要是因为他可以来简化 Spring 应用的初始搭建以及开发过程，想想之前不管你是搭建SSH还是SSM最头痛的莫过于是要创建一大堆繁琐的配置文件，使用SpringBoot就不用了,使用Spring boot，可以轻松的创建独立运行的程序，非常容易构建独立的服务组件，是实现分布式架构、微服务架构利器。Spring boot简化了第三方包">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-10T15:41:38.602Z">
+<meta property="og:updated_time" content="2018-03-10T15:44:22.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于SpringBoot的学习">
 <meta name="twitter:description" content="SpringBoot认识之所以接触SpringBoot并学习它，主要是因为他可以来简化 Spring 应用的初始搭建以及开发过程，想想之前不管你是搭建SSH还是SSM最头痛的莫过于是要创建一大堆繁琐的配置文件，使用SpringBoot就不用了,使用Spring boot，可以轻松的创建独立运行的程序，非常容易构建独立的服务组件，是实现分布式架构、微服务架构利器。Spring boot简化了第三方包">
@@ -194,26 +194,11 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="SpringBoot认识"><a href="#SpringBoot认识" class="headerlink" title="SpringBoot认识"></a>SpringBoot认识</h2><p>之所以接触SpringBoot并学习它，主要是因为他可以来简化 Spring 应用的初始搭建以及开发过程，想想之前不管你是搭建SSH还是SSM最头痛的莫过于是要创建一大堆繁琐的配置文件，使用<br>SpringBoot就不用了,使用Spring boot，可以轻松的创建独立运行的程序，非常容易构建独立的服务组件，是实现分布式架构、微服务架构利器。Spring boot简化了第三方包的引用，通过提供的starter，简化了依赖包的配置。</p>
 <h2 id="搭建一个springBoot-应用"><a href="#搭建一个springBoot-应用" class="headerlink" title="搭建一个springBoot 应用"></a>搭建一个springBoot 应用</h2><p>废话不多说，既然SpringBoot有这么多优点那我们就来搭建一个SpringBoot环境吧，首先Spring Boot提供了一系列的依赖包，所以需要构建工具的支持,这里我使用Maven构建工具  </p>
-<h3 id="1-创建一个普通的maven工程"><a href="#1-创建一个普通的maven工程" class="headerlink" title="1.创建一个普通的maven工程"></a>1.创建一个普通的maven工程</h3><h3 id="2-在pom-xml中添加SpringBoot的依赖"><a href="#2-在pom-xml中添加SpringBoot的依赖" class="headerlink" title="2.在pom.xml中添加SpringBoot的依赖"></a>2.在pom.xml中添加SpringBoot的依赖</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">&lt;version&gt;1.4.0.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;relativePath/&gt;&lt;!-- lookup parent from repository --&gt;</span><br><span class="line">&lt;/parent&gt;</span><br><span class="line"></span><br><span class="line">&lt;properties&gt;</span><br><span class="line">&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">&lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;</span><br><span class="line">&lt;java.version&gt;1.7&lt;/java.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="1-创建一个普通的maven工程"><a href="#1-创建一个普通的maven工程" class="headerlink" title="1.创建一个普通的maven工程"></a>1.创建一个普通的maven工程</h3><h3 id="2-在pom-xml中添加SpringBoot的依赖"><a href="#2-在pom-xml中添加SpringBoot的依赖" class="headerlink" title="2.在pom.xml中添加SpringBoot的依赖"></a>2.在pom.xml中添加SpringBoot的依赖</h3><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;1.4.0.RELEASE&lt;/version&gt;</span><br><span class="line">	&lt;relativePath/&gt;&lt;!-- lookup parent from repository --&gt;</span><br><span class="line">&lt;/parent&gt;</span><br><span class="line"></span><br><span class="line">&lt;properties&gt;</span><br><span class="line">	&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</span><br><span class="line">	&lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt;</span><br><span class="line">	&lt;java.version&gt;1.7&lt;/java.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependencies&gt;</span><br><span class="line">	&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line"></span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</span><br><span class="line">	&lt;scope&gt;test&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
 </code></pre><h3 id="3-创建目录和配置文件"><a href="#3-创建目录和配置文件" class="headerlink" title="3.创建目录和配置文件"></a>3.创建目录和配置文件</h3><p>在maven工程的src/main/resource目录下创建templates目录、static目录和application.properties三个文件<br>其中<br>templates目录：存放模板文件<br>static目录：存放css、js等静态文件<br>application.properties：这个文件配置项目运行所需数据  </p>
-<h3 id="4-创建启动类"><a href="#4-创建启动类" class="headerlink" title="4.创建启动类"></a>4.创建启动类</h3><pre><code>package com.xueliang;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.cache.annotation.EnableCaching;
-
-@SpringBootApplication
-public class MySpringBootDemo {
-    public static void main(String[] args) {
-    //项目入口
-    SpringApplication.run(MySpringBootDemo.class, args);
-
-    }
-}
+<h3 id="4-创建启动类"><a href="#4-创建启动类" class="headerlink" title="4.创建启动类"></a>4.创建启动类</h3><pre><code><figure class="highlight plain"><figcaption><span>com.xueliang;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import org.springframework.boot.SpringApplication;</span><br><span class="line">import org.springframework.boot.autoconfigure.EnableAutoConfiguration;</span><br><span class="line">import org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line">import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;</span><br><span class="line">import org.springframework.cache.annotation.EnableCaching;</span><br><span class="line"></span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class MySpringBootDemo &#123;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">	//项目入口</span><br><span class="line">	SpringApplication.run(MySpringBootDemo.class, args);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </code></pre><h3 id="5-测试"><a href="#5-测试" class="headerlink" title="5.测试"></a>5.测试</h3><p>写一个Controller跳转 注意: <font color="red">所有代码文件必须放在启动类所在包下</font>  </p>
-<pre><code>package com.xueliang.controller;
+<pre><code>```package com.xueliang.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -228,7 +213,7 @@ public class UserController {
     public String showHello(){
     return &quot;hello Springboot&quot;;
     }
-}  
+}```  
 </code></pre><p>至此一个springBoot应用已经搭建成功</p>
 
         </div>
@@ -238,7 +223,7 @@ public class UserController {
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-03-10T15:41:38.602Z" itemprop="dateUpdated">2018-03-10 23:41:38</time>
+    最后更新时间：<time datetime="2018-03-10T15:44:22.707Z" itemprop="dateUpdated">2018-03-10 23:44:22</time>
 </span><br>
 
 
