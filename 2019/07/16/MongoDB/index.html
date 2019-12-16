@@ -13,24 +13,24 @@
     
     
     
-    <title>No title | Braw的博客</title>
+    <title>MongoDB总结 | Braw的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="">
-    <meta name="description" content="###一、MongoDB基本概念 ####1.数据库(database)    与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。    MongoDB的默认数据库为”db”，该数据库存储在data目录中。MongoDB的单个实例可以    纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。 ####2.集合(collection)">
+    <meta name="description" content="一、MongoDB基本概念1.数据库(database)与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。 MongoDB的默认数据库为&amp;quot;db&amp;quot;，该数据库存储在data目录中。MongoDB的单个实例可以 纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。 2.集合(collection)与关系型数据库中的表相对应，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="No title">
+<meta property="og:title" content="MongoDB总结">
 <meta property="og:url" content="http://yoursite.com/2019/07/16/MongoDB/index.html">
 <meta property="og:site_name" content="Braw的博客">
-<meta property="og:description" content="###一、MongoDB基本概念 ####1.数据库(database)    与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。    MongoDB的默认数据库为”db”，该数据库存储在data目录中。MongoDB的单个实例可以    纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。 ####2.集合(collection)">
+<meta property="og:description" content="一、MongoDB基本概念1.数据库(database)与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。 MongoDB的默认数据库为&amp;quot;db&amp;quot;，该数据库存储在data目录中。MongoDB的单个实例可以 纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。 2.集合(collection)与关系型数据库中的表相对应，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-13T02:50:45.208Z">
+<meta property="og:updated_time" content="2019-12-16T09:23:31.188Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="No title">
-<meta name="twitter:description" content="###一、MongoDB基本概念 ####1.数据库(database)    与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。    MongoDB的默认数据库为”db”，该数据库存储在data目录中。MongoDB的单个实例可以    纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。 ####2.集合(collection)">
+<meta name="twitter:title" content="MongoDB总结">
+<meta name="twitter:description" content="一、MongoDB基本概念1.数据库(database)与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。 MongoDB的默认数据库为&amp;quot;db&amp;quot;，该数据库存储在data目录中。MongoDB的单个实例可以 纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。 2.集合(collection)与关系型数据库中的表相对应，">
     
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -123,7 +123,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">No title</div>
+        <div class="flex-col header-title ellipsis">MongoDB总结</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -145,7 +145,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">No title</h1>
+        <h1 class="title">MongoDB总结</h1>
         <h5 class="subtitle">
             
                 <time datetime="2019-07-16T04:13:21.209Z" itemprop="datePublished" class="page-time">
@@ -165,12 +165,19 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、MongoDB基本概念"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、MongoDB基本概念</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-数据库-database"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.数据库(database)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-集合-collection"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.集合(collection)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-文档-document"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.文档(document)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-字段-field"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4.字段(field)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-索引-index"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5.索引(index)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、MongoDB增删改查命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">二、MongoDB增删改查命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-数据库相关"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.数据库相关</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-集合相关-database"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.集合相关(database)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-文档相关-database"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3.文档相关(database)</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
 
 <article id="post-MongoDB"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">No title</h1>
+        <h1 class="post-card-title">MongoDB总结</h1>
         <div class="post-meta">
             <time class="post-time" title="2019-07-16 12:13:21" datetime="2019-07-16T04:13:21.209Z"  itemprop="datePublished">2019-07-16</time>
 
@@ -185,29 +192,40 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>###一、MongoDB基本概念</p>
-<p>####1.数据库(database)<br>    与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。<br>    MongoDB的默认数据库为”db”，该数据库存储在data目录中。MongoDB的单个实例可以<br>    纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。</p>
-<p>####2.集合(collection)<br>    与关系型数据库中的表相对应，在MongoDB中为多个文档的集合。<br>    集合存在于数据库中，集合没有固定的结构，这意味着你在对集合可以插入不同格式和类型的数据，<br>    但通常情况下我们插入集合的数据都会有一定的关联性。</p>
-<p>####3.文档(document)<br>    与关系型数据库中的行相对应，文档是一组键值(key-value)对(即 BSON)。<br>    MongoDB 的文档不需要设置相同的字段，并且相同的字段不需要相同的数据类型，<br>    这与关系型数据库有很大的区别，也是 MongoDB 非常突出的特点。</p>
-<p>####4.字段(field)<br>    与关系型数据库中的列相对应，在MongoDB中为文档中的键值</p>
-<p>####5.索引(index)<br>    与关系型数据库中的表相对应</p>
-<p>####6.主键(primary key)<br>    MongoDB自动将_id字段设置为主键</p>
-<p>###二、MongoDB增删改查命令</p>
-<p>####1.数据库相关<br>    创建/切换数据库<br>        use DATABASE_NAME  如果数据库不存在，则创建数据库，否则切换到指定数据库。</p>
-<pre><code>查看数据库
+            <h3 id="一、MongoDB基本概念"><a href="#一、MongoDB基本概念" class="headerlink" title="一、MongoDB基本概念"></a>一、MongoDB基本概念</h3><h4 id="1-数据库-database"><a href="#1-数据库-database" class="headerlink" title="1.数据库(database)"></a>1.数据库(database)</h4><pre><code>与普通关系型数据库一样，为独立的数据集合，一个MongoDB中可以建立多个数据库。
+MongoDB的默认数据库为&quot;db&quot;，该数据库存储在data目录中。MongoDB的单个实例可以
+纳多个独立的数据库，每一个都有自己的集合和权限，不同的数据库也放置在不同的文中。
+</code></pre><h4 id="2-集合-collection"><a href="#2-集合-collection" class="headerlink" title="2.集合(collection)"></a>2.集合(collection)</h4><pre><code>与关系型数据库中的表相对应，在MongoDB中为多个文档的集合。
+集合存在于数据库中，集合没有固定的结构，这意味着你在对集合可以插入不同格式和类型的数据，
+但通常情况下我们插入集合的数据都会有一定的关联性。
+</code></pre><h4 id="3-文档-document"><a href="#3-文档-document" class="headerlink" title="3.文档(document)"></a>3.文档(document)</h4><pre><code>与关系型数据库中的行相对应，文档是一组键值(key-value)对(即 BSON)。
+MongoDB 的文档不需要设置相同的字段，并且相同的字段不需要相同的数据类型，
+这与关系型数据库有很大的区别，也是 MongoDB 非常突出的特点。
+</code></pre><h4 id="4-字段-field"><a href="#4-字段-field" class="headerlink" title="4.字段(field)"></a>4.字段(field)</h4><pre><code>与关系型数据库中的列相对应，在MongoDB中为文档中的键值
+</code></pre><h4 id="5-索引-index"><a href="#5-索引-index" class="headerlink" title="5.索引(index)"></a>5.索引(index)</h4><pre><code>与关系型数据库中的表相对应
+</code></pre><p>####6.主键(primary key)<br>    MongoDB自动将_id字段设置为主键</p>
+<h3 id="二、MongoDB增删改查命令"><a href="#二、MongoDB增删改查命令" class="headerlink" title="二、MongoDB增删改查命令"></a>二、MongoDB增删改查命令</h3><h4 id="1-数据库相关"><a href="#1-数据库相关" class="headerlink" title="1.数据库相关"></a>1.数据库相关</h4><pre><code>创建/切换数据库  
+    use DATABASE_NAME  如果数据库不存在，则创建数据库，否则切换到指定数据库。
+
+查看数据库
     db        查看当前数据
     show dbs  查看所有数据库,创建的数据库不会显示在该命令下，除非你向其中插入一些数据
 
 删除数据库
     db.dropDatabase()  删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名
-</code></pre><p>####2.集合相关(database)<br>    创建集合<br>        db.createCollection(name, options)<br>        参数说明：</p>
-<pre><code>      - name: 要创建的集合名称
+</code></pre><h4 id="2-集合相关-database"><a href="#2-集合相关-database" class="headerlink" title="2.集合相关(database)"></a>2.集合相关(database)</h4><pre><code>创建集合
+    db.createCollection(name, options)
+    参数说明：
+      - name: 要创建的集合名称
       - options: 可选参数, 指定有关内存大小及索引的选项
 删除集合
     db.collection.drop()
       其中collection为集合名
-</code></pre><p>####3.文档相关(database)<br>    插入文档<br>        db.COLLECTION_NAME.insert(document)<br>        除了insert()方法 save()方法也可以向集合中插入文档</p>
-<pre><code>删除文档
+</code></pre><h4 id="3-文档相关-database"><a href="#3-文档相关-database" class="headerlink" title="3.文档相关(database)"></a>3.文档相关(database)</h4><pre><code>插入文档
+    db.COLLECTION_NAME.insert(document)
+    除了insert()方法 save()方法也可以向集合中插入文档
+
+删除文档
     db.COLLECTION_NAME.remove(
            &lt;query&gt;,
            {
@@ -251,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-07-13T02:50:45.208Z" itemprop="dateUpdated">2019-07-13 10:50:45</time>
+    最后更新时间：<time datetime="2019-12-16T09:23:31.188Z" itemprop="dateUpdated">2019-12-16 17:23:31</time>
 </span><br>
 
 
@@ -285,7 +303,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/16/MongoDB/&title=《No title》 — Braw的博客&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/16/MongoDB/&title=《MongoDB总结》 — Braw的博客&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -295,7 +313,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/16/MongoDB/&title=《No title》 — Braw的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/16/MongoDB/&title=《MongoDB总结》 — Braw的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -305,7 +323,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — Braw的博客&url=http://yoursite.com/2019/07/16/MongoDB/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MongoDB总结》 — Braw的博客&url=http://yoursite.com/2019/07/16/MongoDB/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -335,7 +353,7 @@
     <div class="waves-block waves-effect prev">
       <a href="/2019/07/16/mysql1/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">No title</h4>
+        <h4 class="title">Mysql事务和锁机制</h4>
       </a>
     </div>
   
@@ -429,7 +447,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/16/MongoDB/&title=《No title》 — Braw的博客&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/07/16/MongoDB/&title=《MongoDB总结》 — Braw的博客&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -439,7 +457,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/16/MongoDB/&title=《No title》 — Braw的博客&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/07/16/MongoDB/&title=《MongoDB总结》 — Braw的博客&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -449,7 +467,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《No title》 — Braw的博客&url=http://yoursite.com/2019/07/16/MongoDB/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MongoDB总结》 — Braw的博客&url=http://yoursite.com/2019/07/16/MongoDB/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
